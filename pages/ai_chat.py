@@ -14,7 +14,7 @@ st.set_page_config(
     layout="wide",
 )
 
-DATA_DIR = Path("C:/YSJ/data")
+DATA_DIR = Path(__file__).parent.parent / "data"
 MODEL = "gemini-flash-latest"
 
 

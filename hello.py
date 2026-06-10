@@ -16,7 +16,7 @@ st.set_page_config(
     layout="wide",
 )
 
-DATA_DIR = Path("C:/YSJ/data")
+DATA_DIR = Path(__file__).parent / "data"
 FONT = "Malgun Gothic, NanumGothic, sans-serif"
 CATEGORY_ORDER = ["주택용", "상업용", "산업용", "발전용"]
 CATEGORY_COLORS = {"주택용": "#4C72B0", "상업용": "#DD8452", "산업용": "#55A868", "발전용": "#C44E52"}
