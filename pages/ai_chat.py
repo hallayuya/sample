@@ -2,11 +2,7 @@ import io
 import streamlit as st
 import pandas as pd
 from pathlib import Path
-from dotenv import load_dotenv
-import os
 from google import genai
-
-load_dotenv()
 
 st.set_page_config(
     page_title="AI 데이터 분석",
@@ -103,7 +99,7 @@ def build_system_prompt(monthly_json: str, quarterly_json: str) -> str:
 
 
 def get_client():
-    return genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+    return genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
 
 
 # ── 페이지 헤더 ──────────────────────────────────
